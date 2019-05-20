@@ -1,0 +1,27 @@
+@import '../../Styles/variables.scss';
+
+.search {
+	width: 44rem;
+	margin: 2rem auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+
+	&__icon {
+		margin-right: 0.5rem;
+	}
+
+	&__input {
+		background: none;
+		border: none;
+		border-bottom: $standard-border;
+		width: 42rem;
+		height: 2rem;
+		font-size: $font-size;
+		padding-left: 0.5rem;
+
+		&:focus {
+			outline-color: $outline-color;
+		}
+	}
+}

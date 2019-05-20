@@ -1,0 +1,63 @@
+@import '../../Styles/variables.scss';
+
+.idea-input {
+	display: grid;
+	grid-template-columns: 40rem;
+	grid-template-rows: auto auto auto;
+	grid-gap: 1rem;
+	padding: 2rem;
+	padding-bottom: 1rem;
+	background: $blue;
+	width: 40rem;
+	margin: 0rem auto;
+	border-radius: $border-radius;
+
+	&__title {
+		height: 1.5rem;
+		border: $standard-border;
+		padding: 0.5rem;
+		font-size: $font-size;
+		border-radius: $border-radius;
+		background: $white;
+
+		&::placeholder {
+			font-family: $font;
+			color: $font-color;
+		}
+
+		&:focus {
+			outline-color: $outline-color;
+		}
+	}
+
+	&__body {
+		height: 5rem;
+		border: $standard-border;
+		padding: 0.5rem;
+		font-size: $font-size;
+		border-radius: 0.2rem;
+		background: $white;
+
+
+		&::placeholder {
+			font-family: $font;
+			color: $font-color;
+		}
+
+		&:focus {
+			outline-color: $outline-color;
+		}
+	}
+
+	&__submit-btn {
+		width: 5rem;
+		justify-self: flex-end;
+		@include rounded-button;
+		background: $yellow;
+
+		&:disabled {
+			background: $white;
+			cursor: default;
+		}
+	}
+}

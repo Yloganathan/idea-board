@@ -1,0 +1,11 @@
+@import '../../Styles/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.App {
+  font-family: $font;
+  padding: 2rem;
+  height: 100%;
+  color: $black;
+}
+
+

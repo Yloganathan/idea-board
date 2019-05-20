@@ -1,0 +1,33 @@
+Resources:
+  TheBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: tp-idea-board
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+  TheBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref TheBucket
+      PolicyDocument:
+        Id: MyPolicy
+        Version: '2012-10-17'
+        Statement:
+          - Sid: PublicReadForGetBucketObjects
+            Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Join
+            - ''
+            - - 'arn:aws:s3:::'
+              - !Ref TheBucket
+              - /*
+Outputs:
+  WebsiteURL:
+    Value: !GetAtt
+        - TheBucket
+        - WebsiteURL
+    Description: URL for website hosted on S3

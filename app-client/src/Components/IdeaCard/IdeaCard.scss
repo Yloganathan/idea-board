@@ -1,0 +1,60 @@
+@import '../../Styles/variables.scss';
+
+.idea-card {
+	border: $standard-border;
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+	border-radius: $border-radius;
+	background: $white;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	grid-gap: 0.5rem;
+	color: $black;
+	text-decoration: none;
+
+	&__title {
+		font-size: $font-size;
+		font-weight: bold;
+	}
+
+	&__stats {
+		display: flex;
+		justify-self: flex-end;
+		align-items: center;
+	}
+
+	&__upvotes {
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+	}
+
+	&__upvote-icon {
+		width: 1.5rem;
+		height: 2rem;
+	}
+
+	&__comments {
+		display: flex;
+		align-items: center;
+	}
+
+	&__comment-icon {
+		width: 1.5rem;
+
+		path {
+			fill: $black;
+		}
+	}
+
+	&__title-delete {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__delete-icon {
+		width: 2rem;
+	}
+}

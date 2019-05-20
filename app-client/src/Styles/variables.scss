@@ -1,0 +1,34 @@
+//colors
+$black: #4f4e4d;
+$light-blue: #d6e8ea;
+$yellow: #d4c355;
+$blue: #b4d6d9;
+$white: #fffaf2;
+$outline-color: $blue;
+
+
+//font
+$font: 'Lato', sans-serif;
+$font-color: $black;
+$font-size: 1.2rem;
+
+//borders
+$standard-border: 0.1rem solid $black;
+$narrow-border: 0.05rem solid $black;
+$border-radius: 0.2rem;
+
+
+//mixins
+@mixin rounded-button {
+	border: $standard-border;
+  border-radius: 0.2rem;
+  color: $font-color;
+	cursor: pointer;
+	font-size: $font-size;
+  height: 2rem;
+	padding: 0 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $white;
+}
